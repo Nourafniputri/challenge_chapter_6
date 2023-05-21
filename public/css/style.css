@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    min-height: 4000px;
+ }
+
+ /* Navbar */
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0.8rem 10%;
+    background-color: rgba(1, 1, 1, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+}
+
+.navbar .navbar-2 a {
+    font-size: 0.9rem;
+    display: inline-block;
+    margin: 0 1.2rem;
+    color: white;
+}
+
+.navbar .navbar-2 a:hover {
+    color: darkgoldenrod;
+}
+
+.navbar .navbar-3 a {
+    font-size: 0.9rem;
+    display: inline-block;
+    margin: 0 1.2rem;
+    color: white;
+}
+
+.navbar .navbar-3 a:hover {
+    color: darkgoldenrod;
+}
+
+/* Section */
+.hero {
+    min-height: 100vh;
+    background-image: url(/images/main-bg.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 40px 30px black inset;
+}
+
+.hero .content {
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: absolute;
+}
+
+.hero .content h1 {
+    font-size: 3.5rem;
+    line-height: 3rem;
+    margin-top: 0.5rem;
+}
+
+.hero .content  p {
+    font-size: 1.3rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.hero .content a {
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: 1rem;
+    color: black;
+    background-color: darkgoldenrod;
+    border-radius: 0.3rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero div p {
+    font-size: 0.8rem;
+    top: 90%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: absolute;
+}
+   
+/* styling carousel */
+
+ .about {
+    padding: 4rem 8% 1.4rem;
+    background-image: url(/images/the-games-bg.jpg);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 40px 30px black inset;
+   
+}
+
+.carousel-item {
+    height: 70vh;
+    justify-content: end;
+}
+
+.carousel-item img{
+    height: 70vh;
+}
+
+/*game choice*/
+
+#features {
+   background-image: url(/images/features.jpg);
+    justify-content: right;
+    padding: 10rem 23% 1.4rem;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 30px 30px black inset;
+}
+
+.game-list {
+    list-style-type: none;
+}
+
+.game-list:before {
+    content: '';
+    background: white;
+    width: 2px;
+    height: 155px;
+    position: absolute;
+    left: 5px;
+   
+}
+
+.game-item > h5 {
+    color: #ffb548;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.game-item > p {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.game-item.active:before {
+    content: '';
+    background-image: url(/images/ellipse.svg);
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0px;
+}
+
+.game-item.inactive:before {
+    content: '';
+    background-image: url(/images/ellipse-outline.svg);
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0px;
+}
+
+#requirements {
+    background-image: url(/images/requirements.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    box-shadow: 0px 0px 100px 50px rgba(0, 0, 0, 0.7) inset;
+    display: flex;
+    align-items: center;
+}
+    
+table h5 {
+    color: darkgoldenrod;
+}
+
+
+ /* top scores*/
+
+#top-score {
+    background-image: url(/images/top-score-bg.png);
+    background-size: cover;
+    height: 100vh;
+    box-shadow: 0px 0px 100px 50px rgba(0, 0, 0, 0.7) inset;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    background-color: darkgoldenrod;
+    height: 3rem;
+    width: 12rem;
+}
+
+.avatar {
+    border-radius: 50%;
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+    box-shadow: 5px 5px 5px darkgoldenrod;
+}
+
+.card {
+    background-color: #222222;
+    border-radius: .75rem;;
+}
+
+.card-title {
+    color: darkgoldenrod;
+}
+
+.card-body h5, .card-body h6 {
+    display: inline;
+}
+
+.card-body h6 {
+    position: relative;
+    top: 25px;
+    left: -95px;
+}
+
+.card-twitter {
+    background-image: url(/images/twitter-card.png);
+    background-color: #eee;
+    height: 20px;
+    width: 20px;
+}
+
+#newsletter {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(/images/newsletter.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0px 0px 100px 50px rgba(0, 0, 0, 0.7) inset;
+}
+
+#newsletter-bg {
+    width: 50%;
+    min-height: 30vh;
+}
+
+#newsletter-bg > img {
+    box-shadow: 0px 0px 100px 50px rgba(0, 0, 0, 0.8) inset;
+
+}
+
+#newsletter-text {
+    z-index: 1;
+    width: 50%;
+}
+
+#newsletter-text h1, #newsletter-text p {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* media query */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+}
+
