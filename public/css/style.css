@@ -10,7 +10,8 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    min-height: 4000px;
+    min-height: 3000px;
+    background-color: black;
  }
 
  /* Navbar */
