@@ -11,9 +11,6 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      // history.belongsTo(models.user, {
-      //   foreignKey: 'userId'
-      // })
     }
   }
   history.init({

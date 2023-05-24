@@ -13,10 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
       user.hasOne(models.biodataUser, {
         foreignKey: 'userId'
-      })
-      user.hasMany(models.history, {
-        foreignKey: 'userId'
-      })
+      });
     }
   };
   user.init({
