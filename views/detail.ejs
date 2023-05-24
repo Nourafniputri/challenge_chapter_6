@@ -8,53 +8,33 @@
     <title>DETAIL</title>
 </head>
 <body class="p-3">
-  <h2> USER DATA </h2>
-      <!-- <table >
-        <tbody>
-          <tr>
-            <td> User Name</td>
-            <td> : </td>
-          </tr>  
-          <tr>
-            <td> Email </td>
-            <td> : </td>
-          </tr>
-          <tr>
-            <td> Password </td>
-            <td> : </td>
-          </tr>
-        </tbody>
-      </table> -->
-      <table <%= user.id %>>
-        <thead class="thead-light">
-          <tr>
-            <th scope="col">NO.</th>
-            <th scope="col">User Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Password</th>
-            <th scope="col">Umur</th>
-            <th scope="col">City</th>
-            <th scope="col">Country</th>
-            <th scope="col">Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% user.forEach( (data,index) => { %>
-            <tr>
-              <th scope="row"><%= index + 1%></th>
-              <td><%= data.username %></td>
-              <td><%= data.email %></td>
-              <td><%= data.password %></td>
-              <td><%= data.umur %></td>
-              <td><%= data.city %></td>
-              <td><%= data.country %></td>
-              <td><%= data.userSkor %></td>
-            </tr>
-          <% }) %>
-        </tbody>
-      </table>
-      <br>
-      <a href="/user"><button class="btn btn-primary" type="submit">Back</button></a>
+  <h2> BIODATA USER </h2><br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">NO.</th>
+        <th scope="col">User Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Umur</th>
+        <th scope="col">City</th>
+        <th scope="col">Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td><%=user.username %></td>
+        <td><%=user.email %></td>
+        <td><%=user.password %></td>
+        <td><%=user.umur %></td>
+        <td><%=user.city %></td>
+        <td><%=user.country %></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <a href="/user"><button class="btn btn-primary" type="submit">Back</button></a>
       
       
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

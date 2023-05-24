@@ -113,11 +113,11 @@ app.post('/user/update', async (req,res) => {
         const {username,email,password, ...sisa } = req.body;
         const userData = await user.update({ username,email,password }, {where: {id}, transaction});
         await biodataUser.update({ ...sisa, userId: userData.id},{where: {userId: id}, transaction});
-        // await transaction.commit();
-        console.log(...sisa)
-        // res.redirect('/user')
+        await transaction.commit();
+        
+        res.redirect('/user')
     }catch(error) {
-        // await transaction.rollback();
+        await transaction.rollback();
         console.log(error);
         res.status(500).send('Internal Server Error!');
     }
@@ -143,24 +143,24 @@ app.post('/user/delete', async (req,res) => {
 
 app.get('/user/detail', async (req,res) => {
     try {
-        const id = req.params.id; 
+        const id = req.query.id; 
         const userData = await user.findOne({
         where: {id},
-            attributes: [
-                'id',
-                'username',
-                'email',
-                'password',
-                [col('"biodataUser"."umur"'), "umur"],
-                [col('"biodataUser"."city"'), "city"],
-                [col('"biodataUser"."country"'), "country"]
-            ],
-            include: [
-                {
-                    model: biodataUser,
-                    attributes: []
-                }
-            ]
+        attributes: [
+            'id',
+            'username',
+            'email',
+            'password',
+            [col('"biodataUser"."umur"'), "umur"],
+            [col('"biodataUser"."city"'), "city"],
+            [col('"biodataUser"."country"'), "country"]
+        ],
+        include: [
+            {
+                model: biodataUser,
+                attributes: []
+            }
+        ]
         })
         res.render('detail', {user: userData.toJSON()})
      }catch(error) {
@@ -168,16 +168,6 @@ app.get('/user/detail', async (req,res) => {
          res.status(500).send('Internal Server Error!');
      }
 });
-
-
-// app.post('/user/detail', async (req,res) => {
-//     try {
-
-//     }catch(error) {
-//         console.log(error);
-//         res.status(500).send('Internal Server Error!');
-//     }
-// });
 
 
 app.listen(process.env.PORT, () => {
